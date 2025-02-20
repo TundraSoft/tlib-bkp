@@ -109,7 +109,7 @@ jobs:
       - 
         name: Setup Node (required for SonarCloud)
         if: ${{ matrix.deno-version == fromJson(needs.get-versions.outputs.deno-versions)[0] }}
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
          node-version: '17.x'
          registry-url: 'https://registry.npmjs.org'
