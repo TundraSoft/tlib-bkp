@@ -129,7 +129,7 @@ jobs:
       - 
         name: Collect coverage
         if: ${{ matrix.deno-version == fromJson(needs.get-versions.outputs.deno-versions)[0] }}
-        uses: codecov/codecov-action@v4 # upload the report on Codecov
+        uses: codecov/codecov-action@v5 # upload the report on Codecov
         with:
           file: coverage/report.lcov
           token: ${{ secrets.CODECOV_TOKEN }} # required
